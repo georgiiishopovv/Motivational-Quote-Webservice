@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;1,400;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display SC', serif;
+}
+
+.quote-box blockquote,
+.quote-box span {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.quote-box.loaded blockquote,
+.quote-box.loaded span {
+    opacity: 1;
+}
+
+body {
+    background-color: rgb(133, 221, 202);
+}
+
+.search-bar {
+    position: absolute;
+    top: 10%;
+    /* Adjust as needed */
+    left: 35%;
+    z-index: 2;
+    /* Set a higher z-index value */
+    transition: transform 0.5s ease;
+}
+
+.quote-box {
+    background-color: #fff;
+    width: 700px;
+    position: absolute;
+    top: 20%;
+    left: 28%;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.15);
+    transition: transform 0.5s ease;
+}
+
+.quote-box.moved {
+    transform: translateX(-100px);
+}
+
+.search-bar.moved {
+    transform: translateX(-100px);
+}
+
+.search-bar .categoryInput {
+    width: 100px;
+    margin-left: 20px;
+}
+
+.quote-box h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.quote-box h2::after {
+    content: '';
+    width: 85px;
+    height: 6px;
+    border-radius: 3px;
+    background-color: rgb(231, 141, 31);
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.quote-box blockquote {
+    font-size: 26px;
+    min-height: 110px;
+}
+
+.quote-box blockquote::before,
+.quote-box blockquote::after {
+    content: '"';
+}
+
+.quote-box span {
+    display: block;
+    margin-top: 10px;
+    position: relative;
+    float: right;
+}
+
+.quote-box span::before {
+    content: '';
+    width: 20px;
+    height: 2px;
+    background-color: rgb(231, 141, 31);
+    position: absolute;
+    top: 50%;
+    left: -30px;
+}
+
+.quote-box div {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.quote-box button {
+    background-color: rgb(26, 168, 137);
+    color: #fff;
+    border-radius: 25px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    width: 150px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.quote-box button img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.quote-box button:nth-child(3) {
+    background-color: transparent;
+    color: #333;
+}
+
+.quote-box .authorButton {
+    background-color: rgb(236, 218, 99);
+    color: white;
+}
+
+.authorModal {
+    background-color: #fff;
+    width: 400px;
+    height: 600px;
+    position: absolute;
+    top: 50%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.15);
+    display: block;
+    max-height: 600px;
+    /* Set a maximum height for the box */
+    overflow-y: auto;
+    /* Enable vertical scrolling if content exceeds the max height */
+    transition: max-height 0.3s ease;
+    /* Add a smooth transition effect */
+}
+
+.authorModal img {
+    width: 90%;
+    height: 50%;
+    border-radius: 30px;
+}
+
+#closeModal {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+#description {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    line-height: 3em;
+    margin-top: 18px;
+}
+
+#line {
+    overflow: visible; /* For IE */
+    height: 30px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+}
+#line:before { /* Not really supposed to work, but does */
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: black;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
+}
+
+#categoryInput{
+    border-radius: 30px;
+    border-style: bold;
+    padding: 7px;
+    border-color: rgb(231, 141, 31);
+}

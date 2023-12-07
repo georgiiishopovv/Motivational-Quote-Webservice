@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Motivational Quotes</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="search-bar">
+        <label for="categoryInput">Search by category:</label>
+        <input type="text" id="categoryInput" placeholder="Enter category">
+        <button id="searchButton" onClick="categoryQuote()">Search</button>
+    </div>
+
+    <div class="quote-box">
+        <h2 id="header"> Motivational Quote of the Day </h2>
+        <blockquote id="quote"> Loading... </blockquote>
+        <span id="author"> Loading... </span>
+        <div>
+            <button id="getQuoteButton" onClick="getQuote()">Get a new quote!</button>
+            <button id="authorButton" onClick="informationShow()"> Author Information </button>
+            <button id="tweetButton" onclick="tweet()"> <img src="xlogoX.png" alt="Icon of X">Share on X</button>
+        </div>
+    </div>
+
+    <div class="authorModal">
+        <image id="closeModal" src="closeIcon.png" href="CLOSE" onclick="closeModal()"></image>
+        <img id="authorImage" src="" href="Author Image">
+        <h3 id="name"> Loading </h3>
+        <h5 id="birth"> Year </h5>
+        <hr id="line">
+        <p id="description"> Content </p>
+    </div>
+</body>
+</html>
