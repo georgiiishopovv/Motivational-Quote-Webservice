@@ -13,7 +13,7 @@ A responsive website that utilizes two APIs and a SPARQL query to present a moti
 - When the author modal is closed the container moves back to its original position
 - Simple animation upon each new quote load
 
-**Technical Logistics**]
+**Technical Logistics**
 The majority of the website revolves around the implementation of the API requests. The first API is used to generate the quotes and search by category. Once the quote has been generated,
 a second API is used to check if there is any information about the author of the quote. Simultaneously, a SPARQL query is used to search for an image of the author. If at least one of the
 two (information, image) is found, the author modal button becomes available and the user can learn more about the author.
