@@ -1,5 +1,5 @@
 # Motivational-Quote-Webservice
-**Short Description** 
+**Short Description:** 
 A responsive website that utilizes two APIs and a SPARQL query to present a motivational quote, information about the author and provides the opportunity to directly share the chosen quote to Twitter(X) using an Intent Link.
 
 **Functionality**
